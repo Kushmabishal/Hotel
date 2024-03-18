@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ebc3d5e333.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Hotel</title>
+</head>
+
+<body class="bg-white text-secondary">
+    <div class="dashboard">
+        <header class="py-1">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-between align-items-baseline">
+                    <div class="col-5">
+                        <nav class="navbar">
+                            <button class="navbar-toggler border-0 text-white fs-2" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                                aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><i
+                                    class="fa-solid fa-bars text-white px-4"></i>Menu
+                            </button>
+                            <div class="offcanvas offcanvas-start opacity-75" tabindex="-1" id="offcanvasNavbar"
+                                aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img
+                                            src="images/logo-no-background.png" alt="logo" height="50px" width="auto">
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                                        <li class="nav-item form-control py-2 my-2 ">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item form-control py-2 my-2 ">
+                                            <a class="nav-link" href="#">Contact</a>
+                                        </li>
+
+                                        <li class="nav-item dropdown form-control my-2  py-2">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                ROOMS
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Delux Rooms</a></li>
+                                                <li><a class="dropdown-item" href="#">Cosy Rooms</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <form class="d-flex my-2 role=" search">
+                                        <input class="form-control me-2 py-2 form-control" type="search"
+                                            placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success py-2" type="submit">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                    </div>
+                    </nav>
+                    <div class="col-2">
+                        <img src="images/logo-no-background.png" alt="logo" class="img-fluid">
+                    </div>
+                    <div class="col-5 d-flex justify-content-end align-items-center">
+                        <a class="navbar-brand rounded bg-success px-3 py-2 text-white" href="#">MAKE A RESERVATION</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="home-section" class="py-5">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <h2 class="text-white py-2 fs-1 text-center">Discover comfort, <br> create memories – your perfect stay
+                    awaits <br> at our
+                    hotel!</h2>
+                <h2 class="text-white py-2 text-center">"Experience comfort and luxury like never before at our hotel.
+                    Book now for
+                    a
+                    delightful stay
+                    filled with exceptional
+                    service and unforgettable moments!"</h2>
+                <div class="row">
+                    <div class="booking-form col-lg-12">
+                        <h5 class="text-white fs-4">Check Avability</h5>
+                        <div class="row py-4 d-flex justify-content-around align-items-center form-control">
+                            <div class="col-3 d-flex justify-content-between align-items-center">
+                                <i class="fa-regular fa-calendar text-secondary px-1"></i>
+                                <div class="d-flex flex-column">
+                                    <label for="Checkin">CheckIn</label>
+                                    <input type="datetime" id="Checkin" class="form-control"
+                                        placeholder="Check in Date">
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex justify-content-between align-items-center">
+                                <i class="fa-regular fa-calendar text-secondary px-1"></i>
+                                <div class="d-flex flex-column">
+                                    <label for="checkout">CheckOut</label>
+                                    <input type="datetime" id="checkout" class="form-control"
+                                        placeholder="Check Out Date">
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex justify-content-between align-items-center">
+                                <i class="fa-regular fa-user text-secondary px-1"></i>
+                                <div class="d-flex flex-column">
+                                    <label for="Guest">Guests</label>
+                                    <input type="number" id="Guest" class="form-control" placeholder="2 Guest 1 Room">
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <button type="button" class="btn btn-outline-success">BOOK NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- about our hotel section begain  -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <img src="images/aaron-burden-6csuZQ9oZcI-unsplash.jpg" alt="image" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <img src="images/abhay-rahul--O7pPRye1gY-unsplash.jpg" alt="image" class="img-fluid ">
+                            <img src="images/allphoto-bangkok-tYd9AaYofn8-unsplash.jpg" alt="image"
+                                class="img-fluid pt-4">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h3 class="d-flex justify-content-end">About Us<span class="bg-danger-subtle"
+                            style="padding: 10px 100px;"></span></h3>
+                    <p>The way we travel and move has changed in the last few years. We no longer want the typical
+                        photo that all our contacts
+                        post on Instagram. We no longer want to elbow our way through crowded museums. We no longer
+                        want to view the city
+                        through the mobile lens.
+                    </p>
+                    <p>It’s not about travelling, it’s about discovering. Travellers are the 21st century pilgrims
+                        who seek the basic,
+                        long-lasting and human essence. The city is a canvas of emotions and experiences and culture
+                        is the invisible
+                        architecture that frames it.
+                    </p>
+                    <p>Only YOU designs a new way of travelling inspired by the local and human connection where
+                        each hotel turns into a
+                        reflection of its environment. Dear travellers: you’ve reached your destination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms details section start  -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <h3><span class="bg-info-subtle" style="padding: 0 100px;"></span>OUR ROOMS</h3>
+                <div class="owl-carousel d-flex justify-content-center">
+                    <div class="card">
+                        <img src=" images/room1.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>2</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room2.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>4</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room3.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>2</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room4.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>3</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room5.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>2</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room6.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>8</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room7.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>2</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src=" images/room8.jpg" class="card-img-top img-fluid" alt="room">
+                        <div class="card-body">
+                            <h5 class="card-title">Attached Bathroom</h5>
+                            <p class="card-text"><span class="fw-bold">Capacity : </span>5</p>
+                            <p class="card-text"><span class="fw-bold">Bed Info : </span></p>
+                            <a href="#" class="btn btn-primary">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="journals">
+        <div class="container text-warning-emphasis">
+            <div class="row">
+                <h3 class="d-flex justify-content-end">Journals <span class="bg-success-subtle"
+                        style="padding: 0 100px;"></span></h3>
+                <div class="col-12 my-5">
+                    <h1 class="fs-1 py-2">THE PERFECT <br>BASE</h1>
+                    <h3>FOR BUSINESS TRAVELLLERS</h3>
+                </div>
+                <div class="col-6">
+                    <h4>FREE WIFI</h4>
+                    <p class="border-start border-4 px-2 border-warning-subtle pe-4">When you stay in our hotel you'll
+                        have
+                        to access
+                        unlimited wifi
+                        facilities.
+                        Using our ultra-fast fiber, we guarantee you'll stay connected while travelling for work.</p>
+                </div>
+                <div class="col-6">
+                    <h4>MODERN BUSINESS FACILITIES</h4>
+                    <p class="border-start border-4 px-2 border-warning-subtle pe-4">Our rooms are design with two
+                        things in mind, confort and convenience. A large workspace, multi jack points, light and
+                        stationary are some of features guest enjoy in our hotel. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <h2 class="text-center my-2 fw-bold">FEATURES</h2>
+            <div class="row py-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="images/sightseeing.jpg" alt="sightseeing" height="80px" width="80px"
+                        class="rounded-circle">
+                    <h4>SIGHTSEEING</h4>
+                    <p>Explore breathtaking sights and immerse yourself in rich cultural experiences with our
+                        sightseeing tours.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="images/drink.jpg" alt="Food and drink" height="80px" width="80px" class="rounded-circle">
+                    <h4>FOOD AND DRINK</h4>
+                    <p>Savor exquisite flavors and indulge in delightful refreshments with our diverse selection
+                        of food and drink offerings.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center text-center">
+                    <img src="images/hiking.jpg" alt="hiking" height="80px" width="80px" class="rounded-circle">
+                    <h4>HIKING</h4>
+                    <p>Embark on thrilling adventures and reconnect with nature through our exhilarating hiking
+                        experiences.</p>
+                </div>
+                <div
+                    class="col-lg-3 col-md-6 col-sm-12 position-relative d-flex align-items-center justify-content-center">
+                    <img src="images/explore-more.jpg" alt="explore image" class="img-fluid">
+                    <div class="position-absolute z-2 d-flex flex-column align-items-center mx-auto">
+                        <h2 class="text-center text-white">THE STORY OF EVERY PLACE</h2>
+                        <button type="button" class="btn btn-outline-light border">Explore
+                            More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <h3 class="d-flex justify-content-start"><span class="bg-secondary-subtle"
+                    style="padding: 0 100px;"></span>FACILITIES
+            </h3>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/67663_tv_icon.png" alt="tv icon" class="img-fluid" height="80px" width="80px">
+                        <h4>50+ CHANNEL SKY TV</h4>
+                        <p>Sit back most of our SKY Guest select which boosts 50+ channel of entertainment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/television_5416261.png" alt="tv icon" class="img-fluid text-success"
+                            height="80px" width="80px">
+                        <h4>32INCH FLAT SCREEN TV</h4>
+                        <p>All our rooms equipped with 32 inch flat screen TVs</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/laundry_2107144.png" alt="washing machine icon" class="img-fluid" height="80px"
+                            width="80px">
+                        <h4>LAUNDRY FACILITIES</h4>
+                        <p>Onsites washing and drying facilities. Dry cleaning service on request.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/dumbbell_375794.png" alt="gym icon" class="img-fluid" height="80px"
+                            width="80px">
+                        <h4>24/7 GYM ACCESS</h4>
+                        <p>Enjoy the access to standford 24/7 gym-the lion's den standford.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/no-smoking-icon-26829.png" alt="non smoking icon" class="img-fluid"
+                            height="80px" width="80px">
+                        <h4>NON SMOKING ROOMS</h4>
+                        <p>All rooms are non smoking however we have the number of alternative smoking area on site.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/parking-icon-png-10878.png" alt="parking icon" class="img-fluid" height="80px"
+                            width="80px">
+                        <h4>SECURE PARKING</h4>
+                        <p>Vehicals are visible from your rooms and are monitored by CCTV.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/location-icon-png-4246.png" alt="location icon" class="img-fluid" height="80px"
+                            width="80px">
+                        <h4>LOCATION</h4>
+                        <p>All rooms are non smoking however we have the number of alternative smoking area on site.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="border rounded box p-4">
+                        <img src="images/wifi-icon-3782.png" alt="wifi icon" class="img-fluid" height="80px"
+                            width="80px">
+                        <h4>FREE WI-FI</h4>
+                        <p>All rooms are non smoking however we have the number of alternative smoking area on site.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-4">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d441.6287006026541!2d85.34449891336382!3d27.68547986156147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198d99470043%3A0x167d008efb47d64c!2sBroadway%20Infosys!5e0!3m2!1sen!2snp!4v1709803787704!5m2!1sen!2snp"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+    <footer class="bg-dark pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12 d-flex justify-content-between">
+                    <img src="images/logo-no-background.png" alt="logo" height="80px" width="auto">
+                    <div class="d-flex flex-column">
+                        <a href="#" class="text-decoration-none fs-4 text-white">About</a>
+                        <a href="#" class="text-decoration-none fs-4 text-white">Rooms</a>
+                        <a href="#" class="text-decoration-none fs-4 text-white">Facilities</a>
+                        <a href="#" class="text-decoration-none fs-4 text-white">Contact us</a>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="#"><i class="fa-brands fa-square-facebook text-white fs-1 mx-3"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-twitter text-white fs-1 mx-3"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram text-white fs-1 mx-3"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-baseline pt-4">
+                <p>Designed by Bishal</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+            margin: 10,
+            loop: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                900: {
+                    items: 4
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>

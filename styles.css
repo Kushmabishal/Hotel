@@ -1,0 +1,97 @@
+.dashboard {
+    background-image: url(images/ihor-saveliev-_aN6zIDRLfQ-unsplash.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section#home-section .container {
+    height: 90vh;
+}
+
+.card {
+    height: 100%;
+}
+
+.card img {
+    height: 200px;
+    width: auto;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    width: 40px;
+    height: 40px;
+    background: lightgreen;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    opacity: 0;
+    /* non visible */
+    transition: opacity linear 300ms;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    left: unset;
+    display: block;
+    right: 10px;
+}
+
+.owl-carousel:hover .owl-nav button.owl-prev,
+.owl-carousel:hover .owl-nav button.owl-next {
+    opacity: 1;
+    /* for visible */
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.owl-carousel button.owl-dot {
+    background-color: gray;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 15px 10px;
+}
+
+.owl-carousel button.owl-dot.active {
+    background-color: rgb(155, 155, 6);
+    transform: scaleX(2);
+    border-radius: 15px;
+    transition: transform ease-in-out 200ms;
+}
+
+
+#journals {
+    background-image: url(images/cathryn-lavery-NsWcRlBT_74-unsplash.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.box {
+    height: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .dashboard {
+        background-size: auto 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .dashboard {
+        background-size: auto 100%;
+    }
+}
